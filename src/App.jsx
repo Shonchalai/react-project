@@ -1,6 +1,10 @@
-import Header from './components/Header'
-import Navbar from './components/Navbar'
+import Header from './components/Header/Header'
+import Navbar from './components/Navbar/Navbar'
 import Profile from './components/Profile/Profile'
+import Messages from './components/Messages/Messages'
+import Friends from './components/Friends/Friends'
+import News from './components/News/News'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import './App.css'
 import styled from '@emotion/styled'
 
@@ -25,17 +29,22 @@ const ContentWrapper = styled.div`
 function App() {
 
   return (
-    <>
+    <Router>
       <Wrapper>
         <HeaderWrapper>
           <Header />
         </HeaderWrapper>
         <ContentWrapper>
           <Navbar />
-          <Profile />
+          <Routes>
+            <Route path='/profile' element={< Profile />} />
+            <Route path='/messages' element={<Messages />} />
+            <Route path='/friends' element={<Friends />} />
+            <Route path='/news' element={<News />} />
+          </Routes>
         </ContentWrapper>
       </Wrapper>
-    </>
+    </Router> 
   )
 }
 
