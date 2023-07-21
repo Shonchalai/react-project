@@ -1,5 +1,6 @@
 // import React from 'react'
 import styled from '@emotion/styled'
+import {Link} from 'react-router-dom'
 
 const NavbarStyle = styled.div`
   background-color: #73a1b2;
@@ -15,10 +16,10 @@ const NavbarStyle = styled.div`
 const Navbar = () => {
   return (
     <NavbarStyle>
-      <a href='/profile'>Profile</a>
-      <a href='/messages'>Messages</a>
-      <a href='/friends'>Friends</a>
-      <a href='/news'>News</a>
+      <Link to='/profile'>Profile</Link>
+      <Link to='/messages'>Messages</Link>
+      <Link to='/friends'>Friends</Link>
+      <Link to='/news'>News</Link>
     </NavbarStyle>
   )
 }
