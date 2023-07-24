@@ -1,9 +1,9 @@
-import Header from './components/Header/Header'
-import Navbar from './components/Navbar/Navbar'
-import Profile from './components/Profile/Profile'
-import Messages from './components/Messages/Messages'
-import Friends from './components/Friends/Friends'
-import News from './components/News/News'
+import Header from './components/header/Header'
+import Navbar from './components/navbar/Navbar'
+import Profile from './components/profile/Profile'
+import Dialogs from './components/Dialogs/Dialogs'
+import Friends from './components/friends/Friends'
+import News from './components/news/News'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import './App.css'
 import styled from '@emotion/styled'
@@ -38,7 +38,7 @@ function App() {
           <Navbar />
           <Routes>
             <Route path='/profile' element={< Profile />} />
-            <Route path='/messages' element={<Messages />} />
+            <Route path='/messages' element={<Dialogs />} />
             <Route path='/friends' element={<Friends />} />
             <Route path='/news' element={<News />} />
           </Routes>
