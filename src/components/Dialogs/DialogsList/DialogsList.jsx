@@ -1,5 +1,4 @@
-import React from 'react'
-import DialogItem from './../DialogsList/DialogItem'
+import DialogItem from './DialogItem'
 import styled from '@emotion/styled'
 
 const DialogsList = ({className}) => {

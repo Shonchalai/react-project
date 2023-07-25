@@ -1,5 +1,4 @@
-import React from 'react'
-import DialogsList from './DialogsList/DialogsList'
+import DialogsList from './dialogsList/DialogsList'
 import Messages from './messages/Messages'
 import styled from '@emotion/styled'
 

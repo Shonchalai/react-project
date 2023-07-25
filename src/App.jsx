@@ -1,7 +1,7 @@
 import Header from './components/header/Header'
 import Navbar from './components/navbar/Navbar'
 import Profile from './components/profile/Profile'
-import Dialogs from './components/Dialogs/Dialogs'
+import Dialogs from './components/dialogs/Dialogs'
 import Friends from './components/friends/Friends'
 import News from './components/news/News'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
