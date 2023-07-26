@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-const Post = ({ className, message, count }) => {
+const Post = ({ className, message, likesCount }) => {
   return (
     <div className={className}>
       <img
@@ -8,7 +8,7 @@ const Post = ({ className, message, count }) => {
         alt="Avatar"
       ></img>
       {message}
-      <button>Like {count}</button>
+      <button>Like {likesCount}</button>
     </div>
   );
 };

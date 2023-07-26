@@ -12,5 +12,5 @@ const DialogItem = ({className, name, id}) => {
 
 export default styled(DialogItem)`
   display: flex;
-  background-color: red;
+  text-decoration: none;
 `

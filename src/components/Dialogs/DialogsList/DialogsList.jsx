@@ -1,17 +1,22 @@
-import DialogItem from './DialogItem'
-import styled from '@emotion/styled'
+import DialogItem from "./DialogItem";
+import styled from "@emotion/styled";
 
-const DialogsList = ({className}) => {
+const DialogsList = ({ className }) => {
+  const dialogsData = [
+    { id: 1, name: "Vasya" },
+    { id: 2, name: "Galya" },
+    { id: 3, name: "Vera" },
+  ];
+  
   return (
     <div className={className}>
       <h5>Members</h5>
-      <DialogItem name='Vasya' id='1' />
-      <DialogItem name='Galya' id='2' />
-      <DialogItem name='Vera' id='3' />
-      <DialogItem name='Zotya' id='4' />
+      <DialogItem name={dialogsData[0].name} id={dialogsData[0].id} />
+      <DialogItem name={dialogsData[1].name} id={dialogsData[1].id} />
+      <DialogItem name={dialogsData[2].name} id={dialogsData[2].id} />
     </div>
-  )
-}
+  );
+};
 
 export default styled(DialogsList)`
   display: flex;
@@ -26,7 +31,7 @@ export default styled(DialogsList)`
   margin: 40px;
 
   & > h5 {
-    position: relative; 
+    position: relative;
     margin-bottom: 16px;
     padding-bottom: 16px;
     font-size: 16px;
@@ -34,7 +39,7 @@ export default styled(DialogsList)`
 
     &:after {
       content: "";
-      display: block; 
+      display: block;
       background: #5561e2;
       height: 2px;
       width: 40px;
@@ -43,4 +48,4 @@ export default styled(DialogsList)`
       left: 0;
     }
   }
-`
+`;
