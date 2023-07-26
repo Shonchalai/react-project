@@ -1,6 +1,6 @@
 // import React from 'react'
 import styled from '@emotion/styled'
-import MyPosts from './Posts/MyPosts'
+import MyPosts from './posts/MyPosts'
 import ProfileInfo from './profile_info/ProfileInfo'
 
 const Profile = ({className}) => {
