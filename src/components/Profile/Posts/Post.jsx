@@ -1,19 +1,23 @@
-import React from 'react'
-import styled from '@emotion/styled'
+import styled from "@emotion/styled";
 
-const Avatar = styled.img`
-  width: 50px;
-  border-radius: 50%;
-`
-
-const Post = (props) => {
+const Post = ({ className, message, count }) => {
   return (
-    <div>
-      <Avatar src='https://pbs.twimg.com/profile_images/1311008414156423170/Kxu_7mQS_400x400.jpg' alt='Avatar'></Avatar>
-      {props.message}
-      <button>Like { props.count}</button>
+    <div className={className}>
+      <img
+        src="https://pbs.twimg.com/profile_images/1311008414156423170/Kxu_7mQS_400x400.jpg"
+        alt="Avatar"
+      ></img>
+      {message}
+      <button>Like {count}</button>
     </div>
-  )
-}
+  );
+};
 
-export default Post
+export default styled(Post)`
+  display: flex;
+
+  & > img {
+    width: 50px;
+    border-radius: 50%;
+  }
+`;

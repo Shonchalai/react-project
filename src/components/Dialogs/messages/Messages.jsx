@@ -4,8 +4,9 @@ import styled from '@emotion/styled'
 const Messages = ({className}) => {
   return (
     <div className={className}>
-      <MessageItem />
-      <MessageItem />
+      <MessageItem messageText='Hi' />
+      <MessageItem messageText='Hello' />
+      <MessageItem messageText='Bye' />
     </div>
   )
 }

@@ -5,8 +5,10 @@ const DialogsList = ({className}) => {
   return (
     <div className={className}>
       <h5>Members</h5>
-      <DialogItem />
-      <DialogItem />
+      <DialogItem name='Vasya' id='1' />
+      <DialogItem name='Galya' id='2' />
+      <DialogItem name='Vera' id='3' />
+      <DialogItem name='Zotya' id='4' />
     </div>
   )
 }

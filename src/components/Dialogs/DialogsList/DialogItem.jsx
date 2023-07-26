@@ -1,10 +1,11 @@
 import styled from '@emotion/styled'
+import { Link } from 'react-router-dom'
 
-const DialogItem = ({className}) => {
+const DialogItem = ({className, name, id}) => {
   return (
-    <div className={className}>
-      Nadya
-    </div>
+    <Link to={'/dialogs/' + id} className={className}>
+      {name}
+    </Link>
     
   )
 }

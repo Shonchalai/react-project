@@ -1,6 +1,6 @@
-const MessageItem = () => {
+const MessageItem = ({messageText}) => {
   return (
-    <div>MessageItem1</div>
+    <div>{ messageText }</div>
   )
 }
 
