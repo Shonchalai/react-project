@@ -12,6 +12,7 @@ module.exports = {
   settings: { react: { version: '18.2' } },
   plugins: ['react-refresh'],
   rules: {
+    "react/prop-types": "off", //вместо PropTypes для проверки типов в React, мы отключили это правило ESLint
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },

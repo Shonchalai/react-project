@@ -2,10 +2,12 @@ import styled from "@emotion/styled";
 import Post from "./Post";
 
 const MyPosts = ({ className }) => {
-  const postData = [
+  const posts = [
     { id: 1, message: 'Hi! How are you?', likesCount: 5 },
     { id: 2, message: 'It is my first post.', likesCount: 3},
   ];
+
+  const postsElement = [posts.map(p => <Post message={p.message} likesCount={p.likesCount} key={p.id} />)];
 
   return (
     <div className={className}>
@@ -14,8 +16,7 @@ const MyPosts = ({ className }) => {
         <textarea></textarea>
         <button>Add post</button>
       </div>
-      <Post message={ postData[0].message} likesCount={postData[0].likesCount} />
-      <Post message={ postData[1].message} likesCount={postData[1].likesCount} />
+      {postsElement}
     </div>
   );
 };

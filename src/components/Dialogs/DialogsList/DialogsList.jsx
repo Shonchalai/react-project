@@ -2,18 +2,18 @@ import DialogItem from "./DialogItem";
 import styled from "@emotion/styled";
 
 const DialogsList = ({ className }) => {
-  const dialogsData = [
+  const dialogs = [
     { id: 1, name: "Vasya" },
     { id: 2, name: "Galya" },
     { id: 3, name: "Vera" },
   ];
-  
+
+  const dialogsElement = [dialogs.map((d) => <DialogItem name={d.name} id={d.id} key={d.id}/>)];
+
   return (
     <div className={className}>
       <h5>Members</h5>
-      <DialogItem name={dialogsData[0].name} id={dialogsData[0].id} />
-      <DialogItem name={dialogsData[1].name} id={dialogsData[1].id} />
-      <DialogItem name={dialogsData[2].name} id={dialogsData[2].id} />
+      {dialogsElement}
     </div>
   );
 };
