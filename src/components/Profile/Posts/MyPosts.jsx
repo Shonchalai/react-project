@@ -1,11 +1,7 @@
 import styled from "@emotion/styled";
 import Post from "./Post";
 
-const MyPosts = ({ className }) => {
-  const posts = [
-    { id: 1, message: 'Hi! How are you?', likesCount: 5 },
-    { id: 2, message: 'It is my first post.', likesCount: 3},
-  ];
+const MyPosts = ({ className, posts }) => {
 
   const postsElement = [posts.map(p => <Post message={p.message} likesCount={p.likesCount} key={p.id} />)];
 

@@ -3,11 +3,11 @@ import styled from '@emotion/styled'
 import MyPosts from './posts/MyPosts'
 import ProfileInfo from './profileInfo/ProfileInfo'
 
-const Profile = ({className}) => {
+const Profile = ({className, posts}) => {
   return (
     <div className={className}>
       <ProfileInfo />
-      <MyPosts />
+      <MyPosts posts={posts} />
     </div>
   )  
 }

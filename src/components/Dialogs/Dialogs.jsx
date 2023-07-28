@@ -1,12 +1,13 @@
-import DialogsList from './dialogsList/DialogsList'
-import Messages from './messages/Messages'
+import DialogsList from './DialogsList/DialogsList'
+import Messages from './Messages/Messages'
 import styled from '@emotion/styled'
 
-const Dialogs = ({className}) => {
+const Dialogs = ({ className, messages, dialogs }) => {
+
   return (
     <div className={className}>
-      <Messages />
-      <DialogsList />
+      <Messages messages={ messages } />
+      <DialogsList dialogs={ dialogs } />
     </div>
   )
 }
@@ -19,4 +20,4 @@ export default styled(Dialogs)`
   color: #29292d;
   border-left: 1px solid #e7edf2;
   border-right: 1px solid #e7edf2;
-`
+`;

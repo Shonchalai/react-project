@@ -1,12 +1,7 @@
 import DialogItem from "./DialogItem";
 import styled from "@emotion/styled";
 
-const DialogsList = ({ className }) => {
-  const dialogs = [
-    { id: 1, name: "Vasya" },
-    { id: 2, name: "Galya" },
-    { id: 3, name: "Vera" },
-  ];
+const DialogsList = ({ className, dialogs }) => {
 
   const dialogsElement = [dialogs.map((d) => <DialogItem name={d.name} id={d.id} key={d.id}/>)];
 

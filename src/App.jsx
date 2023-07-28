@@ -1,7 +1,7 @@
 import Header from './components/header/Header'
 import Navbar from './components/navbar/Navbar'
 import Profile from './components/profile/Profile'
-import Dialogs from './components/dialogs/Dialogs'
+import Dialogs from './components/Dialogs/Dialogs'
 import Friends from './components/friends/Friends'
 import News from './components/news/News'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
@@ -26,7 +26,7 @@ const ContentWrapper = styled.div`
   padding: 0 22px;
 `
 
-function App() {
+function App({dialogs, messages, posts}) {
 
   return (
     <Router>
@@ -37,8 +37,8 @@ function App() {
         <ContentWrapper>
           <Navbar />
           <Routes>
-            <Route path='/profile' element={< Profile />} />
-            <Route path='/messages' element={<Dialogs />} />
+            <Route path='/profile' element={< Profile posts={posts} />} />
+            <Route path='/messages' element={<Dialogs dialogs={dialogs} messages={messages} />} />
             <Route path='/friends' element={<Friends />} />
             <Route path='/news' element={<News />} />
           </Routes>
