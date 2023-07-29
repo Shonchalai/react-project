@@ -1,15 +1,24 @@
-// import React from 'react'
 import styled from '@emotion/styled'
-import {Link} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
-const Navbar = ({ className }) => {
+const Navbar = ({ className, friends}) => {
+
   return (
-    <div className={className}>
-      <Link to='/profile'>Profile</Link>
-      <Link to='/messages'>Messages</Link>
-      <Link to='/friends'>Friends</Link>
-      <Link to='/news'>News</Link>
-    </div>
+    <>
+      <div className={className}>
+        <NavLink to='/profile'>Profile</NavLink>
+        <NavLink to='/messages'>Messages</NavLink>
+        <NavLink to='/news'>News</NavLink>
+        <div>
+          <NavLink to='/friends'>Friends </NavLink>
+          {friends.map((f) => (
+              <NavLink to={`/friends/${f.id}`} key={f.id}>
+                {f.name}
+              </NavLink>
+            ))}
+        </div>
+      </div>
+    </>
   )
 }
 

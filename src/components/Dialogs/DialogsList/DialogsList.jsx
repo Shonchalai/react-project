@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 
 const DialogsList = ({ className, dialogs }) => {
 
-  const dialogsElement = [dialogs.map((d) => <DialogItem name={d.name} id={d.id} key={d.id}/>)];
+  const dialogsElement = [dialogs.map((d) => <DialogItem name={d.name} id={d.id} key={d.id} photoUrl={ d.photoUrl} />)];
 
   return (
     <div className={className}>

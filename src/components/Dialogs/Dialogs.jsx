@@ -2,12 +2,12 @@ import DialogsList from './DialogsList/DialogsList'
 import Messages from './Messages/Messages'
 import styled from '@emotion/styled'
 
-const Dialogs = ({ className, messages, dialogs }) => {
+const Dialogs = ({ className, messages, dialogs, photoUrl }) => {
 
   return (
     <div className={className}>
       <Messages messages={ messages } />
-      <DialogsList dialogs={ dialogs } />
+      <DialogsList dialogs={dialogs} photoUrl={ photoUrl} />
     </div>
   )
 }
